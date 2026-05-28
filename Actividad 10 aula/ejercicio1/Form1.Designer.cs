@@ -1,6 +1,6 @@
 ﻿namespace ejercicio1
 {
-    partial class Form1
+    partial class FormPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,31 +29,25 @@
         private void InitializeComponent()
         {
             tbValor = new TextBox();
-            textBox2 = new TextBox();
             label1 = new Label();
-            button1 = new Button();
+            btnRegistrar = new Button();
             button2 = new Button();
             label2 = new Label();
-            textBox3 = new TextBox();
-            button3 = new Button();
-            textBox4 = new TextBox();
-            button4 = new Button();
+            btnBuscar = new Button();
+            btnListarOrdenado = new Button();
+            lbResultado = new Label();
+            tbBuscar = new TextBox();
+            tbResultado = new TextBox();
             SuspendLayout();
             // 
             // tbValor
             // 
-            tbValor.Location = new Point(138, 31);
+            tbValor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tbValor.Location = new Point(120, 30);
             tbValor.Name = "tbValor";
             tbValor.Size = new Size(100, 23);
             tbValor.TabIndex = 0;
             tbValor.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(42, 180);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 1;
             // 
             // label1
             // 
@@ -64,83 +58,100 @@
             label1.TabIndex = 2;
             label1.Text = "Valor";
             // 
-            // button1
+            // btnRegistrar
             // 
-            button1.Location = new Point(267, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 3;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnRegistrar.Location = new Point(237, 30);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(75, 23);
+            btnRegistrar.TabIndex = 3;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(267, 80);
+            button2.Location = new Point(237, 94);
             button2.Name = "button2";
-            button2.Size = new Size(75, 23);
+            button2.Size = new Size(75, 46);
             button2.TabIndex = 6;
-            button2.Text = "button2";
+            button2.Text = "Calcular Promedio";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(71, 89);
+            label2.Location = new Point(45, 110);
             label2.Name = "label2";
             label2.Size = new Size(59, 15);
             label2.TabIndex = 5;
             label2.Text = "Promedio";
             // 
-            // textBox3
+            // btnBuscar
             // 
-            textBox3.Location = new Point(138, 81);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 4;
+            btnBuscar.Location = new Point(174, 163);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(75, 23);
+            btnBuscar.TabIndex = 9;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
-            // button3
+            // btnListarOrdenado
             // 
-            button3.Location = new Point(148, 179);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 9;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnListarOrdenado.Location = new Point(237, 207);
+            btnListarOrdenado.Name = "btnListarOrdenado";
+            btnListarOrdenado.Size = new Size(75, 45);
+            btnListarOrdenado.TabIndex = 10;
+            btnListarOrdenado.Text = "Lista Ordenado";
+            btnListarOrdenado.UseVisualStyleBackColor = true;
+            btnListarOrdenado.Click += btnListarOrdenado_Click;
             // 
-            // textBox4
+            // lbResultado
             // 
-            textBox4.Location = new Point(42, 230);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(148, 23);
-            textBox4.TabIndex = 7;
-            textBox4.TextChanged += textBox4_TextChanged;
+            lbResultado.AutoSize = true;
+            lbResultado.BorderStyle = BorderStyle.Fixed3D;
+            lbResultado.Location = new Point(131, 110);
+            lbResultado.Name = "lbResultado";
+            lbResultado.Size = new Size(71, 17);
+            lbResultado.TabIndex = 11;
+            lbResultado.Text = "lbResultado";
             // 
-            // button4
+            // tbBuscar
             // 
-            button4.Location = new Point(210, 229);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 10;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            tbBuscar.Location = new Point(55, 164);
+            tbBuscar.Name = "tbBuscar";
+            tbBuscar.Size = new Size(100, 23);
+            tbBuscar.TabIndex = 12;
+            tbBuscar.TextChanged += tbBuscar_TextChanged;
             // 
-            // Form1
+            // tbResultado
+            // 
+            tbResultado.Location = new Point(40, 207);
+            tbResultado.Multiline = true;
+            tbResultado.Name = "tbResultado";
+            tbResultado.Size = new Size(191, 74);
+            tbResultado.TabIndex = 13;
+            tbResultado.TextChanged += tbResultado_TextChanged;
+            // 
+            // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(388, 380);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(textBox4);
+            Controls.Add(tbResultado);
+            Controls.Add(tbBuscar);
+            Controls.Add(lbResultado);
+            Controls.Add(btnListarOrdenado);
+            Controls.Add(btnBuscar);
             Controls.Add(button2);
             Controls.Add(label2);
-            Controls.Add(textBox3);
-            Controls.Add(button1);
+            Controls.Add(btnRegistrar);
             Controls.Add(label1);
-            Controls.Add(textBox2);
             Controls.Add(tbValor);
-            Name = "Form1";
-            Text = "Form1";
+            Cursor = Cursors.PanSW;
+            Name = "FormPrincipal";
+            Text = "Busqueda y Ordenamiento";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,14 +159,14 @@
         #endregion
 
         private TextBox tbValor;
-        private TextBox textBox2;
         private Label label1;
-        private Button button1;
+        private Button btnRegistrar;
         private Button button2;
         private Label label2;
-        private TextBox textBox3;
-        private Button button3;
-        private TextBox textBox4;
-        private Button button4;
+        private Button btnBuscar;
+        private Button btnListarOrdenado;
+        private Label lbResultado;
+        private TextBox tbBuscar;
+        private TextBox tbResultado;
     }
 }
